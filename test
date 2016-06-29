@@ -1,0 +1,288 @@
+---
+  $schema: "http://json-schema.org/draft-04/schema#"
+  type: "Data Logger"
+  title: "Root schema."
+  description: "The Data Logger captures realtime machine data like the event recorder, but is initiated by the operator or service technician. When the system is running, data is collected from all of the VIMS parameters at a sampling rate of once per second. It can store up to 30 minutes of data and this can be retrieved from the machine using a laptop computer."
+  properties: 
+    header: 
+      type: "string"
+      title: "Header schema."
+      description: "Represents the header information from a binary file."
+      properties: 
+        fileName: 
+          type: "string"
+          title: "FileName schema."
+          description: "The name of the file."
+          default: "VIMS_K030_BWEX_APX01293160228095207.DL_"
+        messageId: 
+          type: "string"
+          title: "MessageId schema."
+          description: "Unique system generated id by back office."
+          default: null
+        deviceType: 
+          type: "string"
+          title: "DeviceType schema."
+          description: "Type of device, can be VIMS legacy or 3G"
+          default: "VIMS Legacy"
+        serialNumber: 
+          type: "string"
+          title: "SerialNumber schema."
+          description: "Equipment serial number that uniquely identifies an asset"
+          default: "APX01293"
+        equipmentNumber: 
+          type: "null"
+          title: "EquipmentNumber schema."
+          description: "Equipment Number of the Machine (ASCII)"
+          default: null
+        make: 
+          type: "string"
+          title: "Make schema."
+          description: "Make of an asset or asset manufacturer."
+          default: "CAT"
+        model: 
+          type: "string"
+          title: "Model schema."
+          description: "Model of the asset."
+          default: "785C"
+        configurationVersion: 
+          type: "string"
+          title: "ConfigurationVersion schema."
+          description: "Configuration Version Number (ASCII)."
+          default: "0011C"
+        sourceCodeVersion: 
+          type: "string"
+          title: "SourceCodeVersion schema."
+          description: "Source Code Version Number (ASCII)."
+          default: "10.71"
+        serviceMeter: 
+          type: "integer"
+          title: "ServiceMeter schema."
+          description: "Machine service meter reading of the data point"
+          default: 39727
+        serviceMeterUOM: 
+          type: "string"
+          title: "ServiceMeterUOM schema."
+          description: "Unit of measure for service meter units."
+          default: "Hours"
+        dataStartTime: 
+          type: "string"
+          title: "DataStartTime schema. yyyy-mm-dd hh:mm:ss"
+          description: "Indicates start timestamp of the data in this file."
+          default: "2016-02-27 23:42:46"
+        dataEndTime: 
+          type: "string"
+          title: "DataEndTime schema.yyyy-mm-dd hh:mm:ss"
+          description: "Indicates end timestamp of the data in this file."
+          default: "2016-02-28 00:00:17"
+        downLoadTimeStamp: 
+          type: "string"
+          title: "DownLoadTimeStamp schema.yyyy-mm-dd hh:mm:ss"
+          description: "Indicates the timestamp at which the data or the file is downloaded."
+          default: "2016-02-28 09:00:00"
+        sourceCodePartNumber: 
+          type: "string"
+          title: "SourceCodePartNumber schema."
+          description: "Source code software part number."
+          default: null
+        configurationPartNumber: 
+          type: "string"
+          title: "ConfigurationPartNumber schema."
+          description: "An explanation about the purpose of this instance."
+          default: 2444073
+        hardwarePartNumber: 
+          type: "string"
+          title: "HardwarePartNumber schema."
+          description: "Hardware part number is an ASCII character with the format “xxx-xxxx” padded with zeros to 14 bytes."
+          default: null
+        hardwareVersion: 
+          type: "string"
+          title: "HardwareVersion schema."
+          description: "Hardware x.x version identifier (ASCII)."
+          default: 4
+        targetPayload: 
+          type: "null"
+          title: "TargetPayload schema."
+          description: "An explanation about the purpose of this instance."
+          default: null
+        payloadOverloadPercent: 
+          type: "null"
+          title: "PayloadOverloadPercent schema."
+          description: "Payload Overload Percent (tenths of %)."
+          default: null
+        secondGearReweigh: 
+          type: "null"
+          title: "SecondGearReweigh schema."
+          description: "Second Gear Reweigh enable."
+          default: null
+        conditionalDatalogger: 
+          type: "null"
+          title: "ConditionalDatalogger schema."
+          description: "Conditional Data Logger enable."
+          default: null
+        conditionalDataloggerTime: 
+          type: "null"
+          title: "ConditionalDataloggerTime schema."
+          description: "Conditional Data Logger time/duration?."
+          default: null
+        scoreboardSetting: 
+          type: "null"
+          title: "ScoreboardSetting schema."
+          description: "Scoreboard Setting."
+          default: null
+        lastPassIndicator: 
+          type: "null"
+          title: "LastPassIndicator schema."
+          description: "Status of the Last Pass Indicator."
+          default: null
+        ecmPartNumber: 
+          type: "null"
+          title: "EcmPartNumber schema."
+          description: "An explanation about the purpose of this instance."
+          default: null
+        configFileType: 
+          type: "null"
+          title: "ConfigFileType schema."
+          description: "An explanation about the purpose of this instance."
+          default: null
+        guId: 
+          type: "string"
+          title: "GuId schema."
+          description: "Machine's guId."
+          default: "b2b69591-b503-8k25-8243-e7761c1e524e"
+        dataSize: 
+          type: "integer"
+          title: "DataSize schema."
+          description: "Size of the file in bytes."
+          default: 420538
+        utcFlag: 
+          type: "boolean"
+          title: "UtcFlag schema."
+          description: " Indicates whether the timestamp in the file is UTC. Value is True if UTC ."
+          default: false
+        lastResetTime: 
+          type: "string"
+          title: "LastResetTime schema."
+          description: "Indicate the Year, Month, Day, Hour as when last reset is performed."
+          default: "2016-02-27 23:00:00"
+    operatorId: 
+      type: "string"
+      title: "OperatorId schema."
+      description: "Unique id for an operator."
+      default: "152176"
+    operatorType: 
+      type: "string"
+      title: "OperatorType schema."
+      description: "An explanation about the purpose of this instance."
+      default: "Other"
+    dlStatus: 
+      type: "integer"
+      title: "DlStatus schema."
+      description: "An explanation about the purpose of this instance."
+      default: 0
+    dlFile: 
+      type: "integer"
+      title: "DlFile schema."
+      description: "An explanation about the purpose of this instance."
+      default: 1
+    duration: 
+      type: "integer"
+      title: "Duration schema."
+      description: "duration of data in the file."
+      default: 138
+    durationUOM: 
+      type: "string"
+      title: "DurationUOM schema."
+      description: "unit of measure for duration."
+      default: "Seconds"
+    conditionId: 
+      type: "null"
+      title: "ConditionId schema."
+      description: "unique id for the given condition."
+      default: null
+    conditionDescription: 
+      type: "null"
+      title: "ConditionDescription schema."
+      description: "Description of the condition which triggered the datalogger."
+      default: null
+    timeSeriesData: 
+      type: "array"
+      title: "TimeSeriesData schema."
+      description: "Represents list of channels, list of data points within channels."
+      items: 
+        type: "string"
+        title: "105 schema."
+        description: "a channel"
+        properties: 
+          channelId: 
+            type: "string"
+            title: "ChannelId schema."
+            description: "an uid identification of a channel"
+            default: "229.0"
+          channelName: 
+            type: "string"
+            title: "ChannelName schema."
+            description: "Name of the channel."
+            default: "Rax Dvrt Sol St"
+          source: 
+            type: "integer"
+            title: "Source schema."
+            description: "Represents a data protocol like CDL,J1939 etc."
+            default: 0
+          displayCode: 
+            type: "integer"
+            title: "DisplayCode schema."
+            description: "An explanation about the purpose of this instance."
+            default: 87
+          uom: 
+            type: "string"
+            title: "Uom schema."
+            description: "unit of measure of the channel."
+            default: "metric"
+          timeSeriesPoints: 
+            type: "array"
+            title: "TimeSeriesPoints schema."
+            description: "List of data points for the channel."
+            items: 
+              type: "string"
+              title: "136 schema."
+              description: "Data point of the channel."
+              properties: 
+                dsi: 
+                  type: "boolean"
+                  title: "Dsi schema."
+                  description: "Data status indicator, True represents invalid values."
+                  default: false
+                value: 
+                  type: "string"
+                  title: "Value schema."
+                  description: "Actual value of the data point."
+                  default: "Off"
+    timeSeriesDataTime: 
+      type: "array"
+      title: "TimeSeriesDataTime schema."
+      description: "List of timeseries windows in the data points of a given channel (in time series block)."
+      items: 
+        type: "string"
+        title: "0 schema."
+        description: "An explanation about the purpose of this instance."
+        properties: 
+          triggerTime: 
+            type: "string"
+            title: "TriggerTime schema."
+            description: "An explanation about the purpose of this instance."
+            default: "2016-02-27T23:42:47.000Z"
+          utcFlag: 
+            type: "boolean"
+            title: "UtcFlag schema."
+            description: "Indicates whether the timestamp in the file is UTC. Value is True if UTC."
+            default: false
+          startIndex: 
+            type: "integer"
+            title: "StartIndex schema."
+            description: "Indicates the start of the given timeseries window."
+            default: 0
+          endIndex: 
+            type: "integer"
+            title: "EndIndex schema."
+            description: "Indicates the end of the given timeseries window."
+            default: 137
